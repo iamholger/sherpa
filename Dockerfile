@@ -12,5 +12,5 @@ RUN mkdir /code && cd /code && \
     wget http://www.hepforge.org/archive/sherpa/SHERPA-MC-2.2.1.tar.gz && \
     tar xzf SHERPA-MC-2.2.1.tar.gz && cd SHERPA-MC-2.2.1 && ./configure --prefix=/usr/local --enable-ufo --enable-pyext && make install -j 8 && cd / && rm -rf /code
 RUN echo "c.NotebookApp.token = ''" >> jupyter_notebook_config.py
-ENV LD_LIBRARY_PATH /usr/local/lib
+ENV LD_LIBRARY_PATH /usr/local/lib/SHERPA-MC
 ENV PYTHONPATH /usr/local/lib/python2.7/site-packages
